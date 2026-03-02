@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STRATO — Diseño de Texturas & Superficies</title>
+<title>emme design — Texturas & Superficies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -73,12 +73,13 @@
   }
   .logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 300;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.25em;
     color: var(--cream);
     text-decoration: none;
     position: relative;
+    text-transform: lowercase;
   }
   .logo span { color: var(--accent); }
   .nav-links {
@@ -108,7 +109,7 @@
   .hero-bg {
     position: absolute;
     inset: -20%;
-    background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1600&q=80');
+    background-image: url('img/hero/hero.jpg');
     background-size: cover;
     background-position: center;
     will-change: transform;
@@ -281,23 +282,24 @@
   }
   .ambient-card:hover .ambient-bg { filter: brightness(0.9); }
 
-  .ambient-card[data-ambient="mineral"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80');
+  /* Override: 3 colecciones en grid horizontal */
+  .ambients-grid {
+    padding: 2rem 4rem 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
-  .ambient-card[data-ambient="botanico"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1558618047-f4e60c2aff8b?w=800&q=80');
+  .ambient-card:nth-child(2) { margin-top: 5rem; }
+  .ambient-card:nth-child(3) { margin-top: -3rem; }
+
+  .ambient-card[data-ambient="calacatta-gold"] .ambient-bg {
+    background-image: url('img/texturas/calacatta-gold.jpg');
   }
-  .ambient-card[data-ambient="industrial"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80');
+  .ambient-card[data-ambient="travertino"] .ambient-bg {
+    background-image: url('img/texturas/travertino.jpg');
   }
-  .ambient-card[data-ambient="organico"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80');
-  }
-  .ambient-card[data-ambient="luxe"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=800&q=80');
-  }
-  .ambient-card[data-ambient="nordic"] .ambient-bg {
-    background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');
+  .ambient-card[data-ambient="arabescato"] .ambient-bg {
+    background-image: url('img/texturas/arabescato.jpg');
   }
 
   .ambient-info {
@@ -350,7 +352,7 @@
   .parallax-band-bg {
     position: absolute;
     inset: -30%;
-    background-image: url('https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=1800&q=80');
+    background-image: url('img/ambientes/arabescato-ambiente-01.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.3);
@@ -438,11 +440,11 @@
     transform: scale(1.05);
     filter: brightness(0.95) saturate(1.1);
   }
-  .wide-item:nth-child(1) .wide-item-bg { background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&q=80'); }
-  .wide-item:nth-child(2) .wide-item-bg { background-image: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=600&q=80'); }
-  .wide-item:nth-child(3) .wide-item-bg { background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'); }
-  .wide-item:nth-child(4) .wide-item-bg { background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80'); }
-  .wide-item:nth-child(5) .wide-item-bg { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'); }
+  .wide-item:nth-child(1) .wide-item-bg { background-image: url('img/ambientes/calacatta-gold-ambiente.jpg'); }
+  .wide-item:nth-child(2) .wide-item-bg { background-image: url('img/ambientes/travertino-ambiente.jpg'); }
+  .wide-item:nth-child(3) .wide-item-bg { background-image: url('img/ambientes/arabescato-ambiente-01.jpg'); }
+  .wide-item:nth-child(4) .wide-item-bg { background-image: url('img/ambientes/arabescato-ambiente-02.jpg'); }
+  .wide-item:nth-child(5) .wide-item-bg { background-image: url('img/texturas/calacatta-gold.jpg'); }
 
   .wide-item-label {
     position: absolute;
@@ -530,7 +532,7 @@
   .cta-bg {
     position: absolute;
     inset: -20%;
-    background-image: url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=1600&q=80');
+    background-image: url('img/ambientes/travertino-ambiente.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.2) saturate(0.5);
@@ -632,7 +634,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#">STRA<span>·</span>TO</a>
+  <a class="logo" href="#">emme<span> </span>design</a>
   <ul class="nav-links">
     <li><a href="#colecciones">Colecciones</a></li>
     <li><a href="#ambientes">Ambientes</a></li>
@@ -645,7 +647,7 @@
 <section class="hero">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Diseño de Texturas & Superficies</p>
+    <p class="hero-eyebrow">Texturas & Superficies de Mármol</p>
     <h1>Donde la<br><em>materia</em><br>cobra voz</h1>
     <p>Superficies que transforman espacios. Texturas que evocan emociones. Diseño que trasciende lo visual para convertirse en experiencia táctil y sensorial.</p>
     <a href="#colecciones" class="btn">Explorar colecciones</a>
@@ -659,8 +661,8 @@
     <p class="intro-label">Sobre nosotros</p>
     <div>
       <h2>Arte aplicado a cada <em>superficie</em></h2>
-      <p>En STRATO creemos que cada pared, suelo y techo es un lienzo. Trabajamos con materiales naturales, pigmentos artesanales y técnicas contemporáneas para crear texturas únicas que dan carácter a cualquier espacio.</p>
-      <p>Desde morteros de cal hasta revestimientos minerales, nuestro catálogo abarca una amplia gama de acabados para arquitectura residencial, comercial y de alta gama.</p>
+      <p>En emme design trabajamos con los mármoles más exclusivos del mundo. Cada pieza es seleccionada a mano por sus vetas únicas, su profundidad cromática y su capacidad de transformar cualquier espacio en algo extraordinario.</p>
+      <p>Calacatta Gold, Travertino Romano, Arabescato... superficies que han decorado los interiores más elegantes de la historia y que hoy ponemos a tu alcance con el máximo nivel de acabado y personalización.</p>
       <br>
       <a href="#proceso" class="btn" style="color:var(--dark);border-color:rgba(26,24,20,0.3);">Nuestro proceso</a>
     </div>
@@ -671,62 +673,35 @@
 <section class="collections" id="colecciones">
   <div class="collection-header reveal">
     <h2>Colecciones</h2>
-    <p>Seis ambientes curados para inspirar tu próximo proyecto de interiorismo o arquitectura.</p>
+    <p>Tres mármoles de excepción, cada uno con su propio carácter y su propio universo estético.</p>
   </div>
 
   <div class="ambients-grid">
-    <div class="ambient-card" data-ambient="mineral">
+    <div class="ambient-card" data-ambient="calacatta-gold">
       <div class="ambient-bg"></div>
       <span class="ambient-arrow">Ver colección →</span>
       <div class="ambient-info">
         <p class="ambient-tag">Colección 01</p>
-        <h3 class="ambient-name">Mineral</h3>
-        <p class="ambient-desc">Piedra, sal y tierra. Acabados que capturan la esencia de la naturaleza en su estado más puro y atemporal.</p>
+        <h3 class="ambient-name">Calacatta Gold</h3>
+        <p class="ambient-desc">Blanco luminoso surcado por vetas doradas y ocres. El mármol más preciado de Carrara, símbolo de elegancia atemporal.</p>
       </div>
     </div>
-    <div class="ambient-card" data-ambient="botanico">
+    <div class="ambient-card" data-ambient="travertino">
       <div class="ambient-bg"></div>
       <span class="ambient-arrow">Ver colección →</span>
       <div class="ambient-info">
         <p class="ambient-tag">Colección 02</p>
-        <h3 class="ambient-name">Botánico</h3>
-        <p class="ambient-desc">Inspirado en la textura de la corteza, las hojas y los musgos. Orgánico, cálido y profundamente vivo.</p>
+        <h3 class="ambient-name">Travertino</h3>
+        <p class="ambient-desc">Cálido, poroso y vivo. Sus cavidades naturales cuentan millones de años de historia geológica. Naturaleza en estado puro.</p>
       </div>
     </div>
-    <div class="ambient-card" data-ambient="industrial">
+    <div class="ambient-card" data-ambient="arabescato">
       <div class="ambient-bg"></div>
       <span class="ambient-arrow">Ver colección →</span>
       <div class="ambient-info">
         <p class="ambient-tag">Colección 03</p>
-        <h3 class="ambient-name">Industrial</h3>
-        <p class="ambient-desc">Concreto, óxido y acero patinado. Una estética raw y contemporánea con alma propia.</p>
-      </div>
-    </div>
-    <div class="ambient-card" data-ambient="organico">
-      <div class="ambient-bg"></div>
-      <span class="ambient-arrow">Ver colección →</span>
-      <div class="ambient-info">
-        <p class="ambient-tag">Colección 04</p>
-        <h3 class="ambient-name">Orgánico</h3>
-        <p class="ambient-desc">Formas onduladas, imperfecciones perfectas. Superficies que parecen modeladas por el viento y el agua.</p>
-      </div>
-    </div>
-    <div class="ambient-card" data-ambient="luxe">
-      <div class="ambient-bg"></div>
-      <span class="ambient-arrow">Ver colección →</span>
-      <div class="ambient-info">
-        <p class="ambient-tag">Colección 05</p>
-        <h3 class="ambient-name">Luxe</h3>
-        <p class="ambient-desc">Stucco veneciano, mármol pulido y nácar. El máximo refinamiento en cada centímetro cuadrado.</p>
-      </div>
-    </div>
-    <div class="ambient-card" data-ambient="nordic">
-      <div class="ambient-bg"></div>
-      <span class="ambient-arrow">Ver colección →</span>
-      <div class="ambient-info">
-        <p class="ambient-tag">Colección 06</p>
-        <h3 class="ambient-name">Nordic</h3>
-        <p class="ambient-desc">Blanco roto, lino y madera blanqueada. Quietud escandinava traducida en textura sensorial.</p>
+        <h3 class="ambient-name">Arabescato</h3>
+        <p class="ambient-desc">Vetas grises y azuladas sobre fondo blanco marfil. Un tejido de líneas arabescas que convierte cada superficie en una obra única.</p>
       </div>
     </div>
   </div>
@@ -755,23 +730,23 @@
   <div class="wide-grid reveal">
     <div class="wide-item">
       <div class="wide-item-bg"></div>
-      <div class="wide-item-label"><span>Residencial</span><strong>Apartamento Barcelona</strong></div>
+      <div class="wide-item-label"><span>Calacatta Gold</span><strong>Ambiente residencial</strong></div>
     </div>
     <div class="wide-item">
       <div class="wide-item-bg"></div>
-      <div class="wide-item-label"><span>Hospitality</span><strong>Hotel Boutique</strong></div>
+      <div class="wide-item-label"><span>Travertino</span><strong>Ambiente</strong></div>
     </div>
     <div class="wide-item">
       <div class="wide-item-bg"></div>
-      <div class="wide-item-label"><span>Comercial</span><strong>Flagship Store</strong></div>
+      <div class="wide-item-label"><span>Arabescato</span><strong>Ambiente 01</strong></div>
     </div>
     <div class="wide-item">
       <div class="wide-item-bg"></div>
-      <div class="wide-item-label"><span>Residencial</span><strong>Villa Costa</strong></div>
+      <div class="wide-item-label"><span>Arabescato</span><strong>Ambiente 02</strong></div>
     </div>
     <div class="wide-item">
       <div class="wide-item-bg"></div>
-      <div class="wide-item-label"><span>Hospitality</span><strong>Spa & Wellness</strong></div>
+      <div class="wide-item-label"><span>Calacatta Gold</span><strong>Detalle de textura</strong></div>
     </div>
   </div>
 </section>
@@ -823,7 +798,7 @@
     <h2>Transformemos tu espacio<br>en una <em>obra sensorial</em></h2>
     <p>Cuéntanos sobre tu proyecto. Nuestro equipo estará encantado de desarrollar una propuesta personalizada que haga de tu espacio algo verdaderamente único.</p>
     <div class="cta-btns">
-      <a href="mailto:hola@strato.es" class="btn">Escribirnos</a>
+      <a href="/cdn-cgi/l/email-protection#670f080b0627141315061308490214" class="btn">Escribirnos</a>
       <a href="tel:+34600000000" class="btn" style="border-color:rgba(245,240,232,0.2);color:rgba(245,240,232,0.7);">+34 600 000 000</a>
     </div>
   </div>
@@ -831,8 +806,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">STRA<span>·</span>TO</div>
-  <p>© 2024 Strato Studio. Diseño de Texturas & Superficies.</p>
+  <div class="footer-logo" style="font-size:1.2rem;letter-spacing:0.2em;text-transform:lowercase;">emme<span style="color:var(--accent)"> </span>design</div>
+  <p>© 2024 emme design. Texturas & Superficies de Mármol.</p>
   <ul class="footer-links">
     <li><a href="#">Instagram</a></li>
     <li><a href="#">Pinterest</a></li>
@@ -840,7 +815,7 @@
   </ul>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // CUSTOM CURSOR
   const cursor = document.getElementById('cursor');
   const cursorRing = document.getElementById('cursorRing');
@@ -915,11 +890,4 @@
   const reveals = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
-  }, { threshold: 0.12 });
-
-  reveals.forEach(el => revealObserver.observe(el));
-</script>
-</body>
-</html>
+      if (e.isIntersecting) { e.targe
